@@ -7,8 +7,7 @@ gem 'neversaydie'
 
 gem 'rails', '3.2.13'
 gem 'rails-api'
-gem "actionpack", "~> 0.9.0"
-gem 'splite3'
+gem 'sqlite3'
 gem 'active_model_serializers'
 gem 'strong_parameters'
 
