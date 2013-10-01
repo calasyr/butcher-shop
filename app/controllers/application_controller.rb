@@ -1,4 +1,4 @@
-class ButcherShopController < ActionController::API
+class ApplicationController < ActionController::API
   include ActionController::MimeResponds
 
   def respond_with
