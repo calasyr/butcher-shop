@@ -32,7 +32,7 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     builder (3.0.4)
-    database_cleaner (1.1.1)
+    database_cleaner (1.0.1)
     diff-lcs (1.2.4)
     erubis (2.7.0)
     factory_girl (4.2.0)
@@ -127,7 +127,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
-  database_cleaner
+  database_cleaner (< 1.1.0)
   factory_girl_rails
   fuubar
   neversaydie
