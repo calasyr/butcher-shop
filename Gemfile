@@ -15,6 +15,7 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'fuubar'
   gem 'nyan-cat-formatter'
+  gem 'factory_girl_rails'
 end
 
 group :test do
