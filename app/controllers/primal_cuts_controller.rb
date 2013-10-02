@@ -15,7 +15,7 @@ class PrimalCutsController < ApplicationController
   end
 
   def show
-    respond_with primal_cut
+    respond_with @primal_cut
   end
 
   def edit
