@@ -1,9 +1,7 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
-
 FactoryGirl.define do
   factory :user do
-    first_name "MyString"
-    last_name "MyString"
-    email "MyString"
+    first_name "Fred"
+    last_name "Smith"
+    email "fred.smith@notfedex.com"
   end
 end
