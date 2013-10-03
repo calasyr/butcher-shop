@@ -1,5 +1,10 @@
 require 'spec_helper'
 
 describe Favorite do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should be_a_kind_of ActiveModel::ForbiddenAttributesProtection }
+
+  it { should validate_presence_of :user_id }
+  it { should validate_presence_of :cut_id }
+
+  it { should belong_to :user }
 end
