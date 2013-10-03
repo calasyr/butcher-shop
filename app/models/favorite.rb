@@ -1,5 +1,8 @@
 class Favorite < ActiveRecord::Base
-  attr_accessible :cut_id, :user_id
+  include ActiveModel::ForbiddenAttributesProtection
 
   belongs_to :user
+
+  validates :user_id, :presence => true
+  validates :cut_id, :presence => true
 end
