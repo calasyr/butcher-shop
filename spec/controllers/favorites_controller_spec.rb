@@ -3,6 +3,7 @@ require 'spec_helper'
 describe FavoritesController do
 
   let!(:user)      { create :user }
+  let!(:cut)      { create :cut }
 
   let(:favorite_attrs)     { { :format => :json,
                                :favorite => attributes_for(:favorite) } }
@@ -10,11 +11,11 @@ describe FavoritesController do
   let(:nested_favorite_attrs) { { :format => :json, :user_id => user.id,
                                   :favorite => attributes_for(:favorite)} }
 
-  let(:bad_favorite_attrs) { { :format => :json,
+  let(:bad_favorite_attrs) { { :format => :json, :user_id => user.id,
                                :favorite => { :cut_id => nil,
                                               :user_id => nil } } }
 
-  let(:bad_nested_favorite_attrs) { { :format => :json, :user_id => user.id ,
+  let(:bad_nested_favorite_attrs) { { :format => :json, :user_id => user.id,
                                       :favorite => { :cut_id => nil,
                                                      :user_id => nil } } }
 
@@ -22,7 +23,7 @@ describe FavoritesController do
 
   describe "GET 'index'" do
     before(:each) do
-      get :index, :user_id => user.id
+      get :index, { :format => :json, :user_id => user.id }
     end
 
     its(:body)   { should_not be_empty }
